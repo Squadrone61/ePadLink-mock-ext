@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ePadLink-mock-ext",
+  "version": "1.0",
+  "description": "This extension will help in case you don't have the ePadlink devices. For test purposes.",
+  "icons": {
+    "16": "images/lg_16.png",
+    "32": "images/lg_32.png",
+    "48": "images/lg_48.png",
+    "128": "images/lg_128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [ {
+    "matches": ["http://*/*","https://*/*","*://*/*"],
+    "js": ["scripts/content.js"]
+  } ],
+  "action": {
+    "default_title": "Click to view settings",
+    "default_popup": "popup/popup.html"
+  }
+}
