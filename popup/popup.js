@@ -10,7 +10,7 @@ async function sendOptions(options) {
     active: true,
     lastFocusedWindow: true,
   });
-  await chrome.tabs.sendMessage(tab.id, options);
+  chrome.tabs.sendMessage(tab.id, options);
 }
 
 function formChange() {
